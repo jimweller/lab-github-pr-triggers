@@ -1,0 +1,26 @@
+name: Pull Request Workflow
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    paths:
+      - "README.md"
+      
+jobs:
+  new-pr:
+    runs-on: ubuntu-latest
+    if: github.event.action == 'opened'
+
+    steps:
+      - name: Handle New Pull Request
+        run: echo "NEW pull request"
+
+  updated-pr:
+    runs-on: ubuntu-latest
+    if: github.event.action == 'synchronize'
+
+    steps:
+      - name: Handle Updated Pull Request
+        run: echo "UPDATED pull request"

@@ -1,0 +1,23 @@
+name: Pull Request Completed Workflow
+
+on:
+  pull_request:
+    types:
+      - closed
+    paths:
+      - "README.md"
+      
+jobs:
+  handle-closed-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if PR is Merged
+        run: |
+          if [[ "${{ github.event.pull_request.merged }}" == "true" ]]; then
+            echo "Pull request was merged."
+            # Add actions for a merged PR, like deploying or cleaning up resources
+          else
+            echo "Pull request was closed but not merged."
+            # Add actions for closed without merging, like discarding changes
+          fi
