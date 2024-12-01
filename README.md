@@ -70,5 +70,8 @@ Now, you can run it from the UI or the command line
 ```
 
 - <https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows>
+  - Look for events that DO NOT say `This event will only trigger a workflow run if the workflow file is on the default branch.`
+- <https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/triggering-a-workflow>
+  - `Some events also require the workflow file to be present on the default branch of the repository in order to run.`
 - <https://github.com/orgs/community/discussions/25746>
 - <https://stackoverflow.com/questions/63362126/github-actions-how-can-i-run-a-workflow-created-on-a-non-master-branch-from-t>
