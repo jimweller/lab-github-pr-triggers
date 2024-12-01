@@ -54,7 +54,7 @@ add, commit and push
 git add --verbose . && git commit --message "branch only workflow" && git push origin "$(git_current_branch)"
 ```
 
-Now the worfklow is visible in the UI and the command line
+Now the worfklow is visible in the UI and the command line. You can delete the `push:` if you want.
 
 ```bash
 ❯ gh workflow list
